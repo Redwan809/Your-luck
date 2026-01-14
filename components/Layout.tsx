@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Home as HomeIcon, Wallet } from 'lucide-react';
-import { useNavigation } from '../App';
+import { useNavigation } from '../App.tsx';
 
 interface LayoutProps {
   children: React.ReactNode;

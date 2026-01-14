@@ -1,14 +1,14 @@
 
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import { Layout } from './components/Layout';
-import { Home } from './pages/Home';
-import { Bank } from './pages/Bank';
-import { CoinToss } from './games/CoinToss';
-import { DiceRoll } from './games/DiceRoll';
-import { LuckySpin } from './games/LuckySpin';
-import { CardHigherLower } from './games/CardHigherLower';
-import { NumberGuess } from './games/NumberGuess';
-import { Page, Route } from './types';
+import { Layout } from './components/Layout.tsx';
+import { Home } from './pages/Home.tsx';
+import { Bank } from './pages/Bank.tsx';
+import { CoinToss } from './games/CoinToss.tsx';
+import { DiceRoll } from './games/DiceRoll.tsx';
+import { LuckySpin } from './games/LuckySpin.tsx';
+import { CardHigherLower } from './games/CardHigherLower.tsx';
+import { NumberGuess } from './games/NumberGuess.tsx';
+import { Page, Route } from './types.ts';
 
 const INITIAL_BALANCE = 1000;
 

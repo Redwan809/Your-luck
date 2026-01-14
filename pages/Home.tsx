@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Game } from '../types';
+import { Game } from '../types.ts';
 import { Coins, Dice5, RotateCw, Layers, Hash } from 'lucide-react';
 
 const GAMES: Game[] = [
@@ -58,19 +58,19 @@ export const Home: React.FC<HomeProps> = ({ onSelectGame }) => {
           <button
             key={game.id}
             onClick={() => onSelectGame(game.id)}
-            className={`${game.color} rounded-2xl p-4 flex flex-col items-start text-left h-44 relative overflow-hidden transition-all active:scale-95 shadow-lg group`}
+            className={`${game.color} rounded-2xl p-4 flex flex-col items-start text-left h-44 relative overflow-hidden transition-all active:scale-95 shadow-lg group border border-white/10`}
           >
             <div className="bg-white/20 p-2 rounded-xl mb-3 backdrop-blur-sm shadow-inner">
-              {game.id === 'coin-toss' && <Coins size={22} />}
-              {game.id === 'dice-roll' && <Dice5 size={22} />}
-              {game.id === 'lucky-spin' && <RotateCw size={22} />}
-              {game.id === 'card-higher-lower' && <Layers size={22} />}
-              {game.id === 'number-guess' && <Hash size={22} />}
+              {game.id === 'coin-toss' && <Coins size={22} className="text-white" />}
+              {game.id === 'dice-roll' && <Dice5 size={22} className="text-white" />}
+              {game.id === 'lucky-spin' && <RotateCw size={22} className="text-white" />}
+              {game.id === 'card-higher-lower' && <Layers size={22} className="text-white" />}
+              {game.id === 'number-guess' && <Hash size={22} className="text-white" />}
             </div>
-            <h3 className="font-bold text-base leading-tight uppercase tracking-wide">{game.name}</h3>
+            <h3 className="font-bold text-base leading-tight uppercase tracking-wide text-white">{game.name}</h3>
             <p className="text-[10px] text-white/80 mt-1 font-medium">{game.description}</p>
             
-            <div className="absolute -bottom-2 -right-2 opacity-20 transform rotate-12 group-hover:scale-110 transition-transform">
+            <div className="absolute -bottom-2 -right-2 opacity-20 transform rotate-12 group-hover:scale-110 transition-transform text-white">
                {game.id === 'coin-toss' && <Coins size={70} />}
                {game.id === 'dice-roll' && <Dice5 size={70} />}
                {game.id === 'lucky-spin' && <RotateCw size={70} />}
